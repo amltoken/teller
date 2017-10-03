@@ -144,56 +144,6 @@ run teller service
 go run teller.go -proxy-pubkey=$the_pubkey_of_proxy
 ```
 
-### Dependency Management
-
-Dependencies are managed with [dep](https://github.com/golang/dep).
-
-To install `dep`:
-
-```sh
-go get -u github.com/golang/dep
-```
-
-`dep` vendors all dependencies into the repo.
-
-If you change the dependencies, you should update them as needed with `dep ensure`.
-
-Use `dep help` for instructions on vendoring a specific version of a dependency, or updating them.
-
-After adding a new dependency (with `dep ensure`), run `dep prune` to remove any unnecessary subpackages from the dependency.
-
-When updating or initializing, `dep` will find the latest version of a dependency that will compile.
-
-Examples:
-
-Initialize all dependencies:
-
-```sh
-dep init
-dep prune
-```
-
-Update all dependencies:
-
-```sh
-dep ensure -update -v
-dep prune
-```
-
-Add a single dependency (latest version):
-
-```sh
-dep ensure github.com/foo/bar
-dep prune
-```
-
-Add a single dependency (more specific version), or downgrade an existing dependency:
-
-```sh
-dep ensure github.com/foo/bar@tag
-dep prune
-```
-
 ## Service apis
 
 The HTTP API service is provided by the proxy and serve on port 7071 by default.
@@ -366,4 +316,53 @@ File: scanner/store.go
 
 Maps: btcTx[%tx:%n] -> scanner.DepositValue
 Note: Maps a btc txid:seq to scanner.DepositValue struct
+```
+### Dependency Management
+
+Dependencies are managed with [dep](https://github.com/golang/dep).
+
+To install `dep`:
+
+```sh
+go get -u github.com/golang/dep
+```
+
+`dep` vendors all dependencies into the repo.
+
+If you change the dependencies, you should update them as needed with `dep ensure`.
+
+Use `dep help` for instructions on vendoring a specific version of a dependency, or updating them.
+
+After adding a new dependency (with `dep ensure`), run `dep prune` to remove any unnecessary subpackages from the dependency.
+
+When updating or initializing, `dep` will find the latest version of a dependency that will compile.
+
+Examples:
+
+Initialize all dependencies:
+
+```sh
+dep init
+dep prune
+```
+
+Update all dependencies:
+
+```sh
+dep ensure -update -v
+dep prune
+```
+
+Add a single dependency (latest version):
+
+```sh
+dep ensure github.com/foo/bar
+dep prune
+```
+
+Add a single dependency (more specific version), or downgrade an existing dependency:
+
+```sh
+dep ensure github.com/foo/bar@tag
+dep prune
 ```
