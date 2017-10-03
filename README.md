@@ -61,6 +61,7 @@ Use this for the `-proxy-pubkey` argument in `teller`.
 Install `skycoin-cli`
 
 ```bash
+go get github.com/skycoin/skycoin
 make install-skycoin-cli
 ```
 
@@ -101,7 +102,7 @@ go run tool.go -json newbtcaddress 12323 3 > new_btc_addresses.json
 ```
 
 
-teller's config is managed in `config.json`, need to set the `wallet_path`
+teller's config is managed in `config.json` (located in `/cmd/teller`), need to set the `wallet_path`
 in `skynode` field to an absolute path of skycoin wallet file, and set up the `btcd`
 config in `btc_rpc` field, including server address, username, password and
 absolute path to the cert file.
