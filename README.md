@@ -106,6 +106,8 @@ in `skynode` field to an absolute path of skycoin wallet file, and set up the `b
 config in `btc_rpc` field, including server address, username, password and
 absolute path to the cert file.
 
+This config file "btcd.conf" is located in a hidden folder ".btcd" within the home folder. Edit this file to change config.
+
 config.json:
 
 ```json
