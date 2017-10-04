@@ -1,6 +1,6 @@
 # Teller
 
-[![Build Status](https://travis-ci.org/skycoin/teller.svg?branch=master)](https://travis-ci.org/skycoin/teller)
+[![Build Status](https://travis-ci.org/amltoken/teller.svg?branch=master)](https://travis-ci.org/amltoken/teller)
 
 ## Releases & Branches
 
