@@ -9,16 +9,16 @@ import { Flex, Box } from 'grid-styled';
 import { FormattedMessage, FormattedHTMLMessage, injectIntl } from 'react-intl';
 import { rem } from 'polished';
 
-import { COLORS, SPACE, BOX_SHADOWS, BORDER_RADIUS, DISTRIBUTION_END, DISTRIBUTION_START } from '@skycoin/config';
-import { media } from '@skycoin/utils';
-import Button from '@skycoin/button';
-import Container from '@skycoin/container';
-import Footer from '@skycoin/footer';
-import Header from '@skycoin/header';
-import Heading from '@skycoin/heading';
-import Input from '@skycoin/input';
-import Modal, { styles } from '@skycoin/modal';
-import Text from '@skycoin/text';
+import { COLORS, SPACE, BOX_SHADOWS, BORDER_RADIUS, DISTRIBUTION_END, DISTRIBUTION_START } from 'ui/config';
+import { media } from 'ui/utils';
+import Button from 'ui/components/Button';
+import Container from 'ui/components/Container';
+import Footer from 'ui/components/Footer';
+import Header from 'ui/components/Header';
+import Heading from 'ui/components/Heading';
+import Input from 'ui/components/Input';
+import Modal, { styles } from 'ui/components/Modal';
+import Text from 'ui/components/Text';
 
 import { checkStatus, getAddress } from '../../utils/distributionAPI';
 
