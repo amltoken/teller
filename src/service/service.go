@@ -9,7 +9,7 @@ import (
 	"io"
 
 	"github.com/skycoin/teller/src/daemon"
-	"github.com/skycoin/teller/src/util/logger"
+	"github.com/amltoken/teller/src/util/logger"
 )
 
 const (

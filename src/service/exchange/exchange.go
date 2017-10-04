@@ -8,8 +8,8 @@ import (
 
 	"github.com/boltdb/bolt"
 	"github.com/skycoin/teller/src/daemon"
-	"github.com/skycoin/teller/src/util/dbutil"
-	"github.com/skycoin/teller/src/util/logger"
+	"github.com/amltoken/teller/src/util/dbutil"
+	"github.com/amltoken/teller/src/util/logger"
 	"github.com/skycoin/teller/src/service/scanner"
 	"github.com/skycoin/teller/src/service/sender"
 )
