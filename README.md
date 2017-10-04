@@ -234,7 +234,7 @@ response:
     ]
 }
 ```
-
+## Development
 ### Code linting
 
 ```bash
@@ -246,6 +246,11 @@ make lint
 
 ```bash
 make test
+```
+
+### Run tests and lint
+```bash
+make check
 ```
 
 ### Database structure
