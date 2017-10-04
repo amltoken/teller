@@ -18,7 +18,7 @@ import (
 	"github.com/btcsuite/btcd/btcjson"
 	"github.com/btcsuite/btcd/chaincfg/chainhash"
 	"github.com/btcsuite/btcrpcclient"
-	"github.com/skycoin/teller/src/util/logger"
+	"github.com/amltoken/teller/src/util/logger"
 )
 
 var (

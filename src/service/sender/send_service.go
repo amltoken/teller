@@ -9,8 +9,8 @@ import (
 	"time"
 
 	"github.com/skycoin/skycoin/src/cipher"
-	"github.com/skycoin/teller/src/util/logger"
-	"github.com/skycoin/teller/src/service/cli"
+	"github.com/amltoken/teller/src/util/logger"
+	"github.com/amltoken/teller/src/service/cli"
 )
 
 const sendCoinCheckTime = 3 * time.Second

@@ -1,8 +1,8 @@
 package service
 
 import (
-	"github.com/skycoin/teller/src/daemon"
-	"github.com/skycoin/teller/src/util/logger"
+	"github.com/amltoken/teller/src/daemon"
+	"github.com/amltoken/teller/src/util/logger"
 )
 
 // gateway is used to limit the service's direct Export methods.

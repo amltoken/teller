@@ -24,16 +24,16 @@ import (
 
 	"github.com/skycoin/skycoin/src/cipher"
 
-	"github.com/skycoin/teller/src/daemon"
-	"github.com/skycoin/teller/src/util/logger"
-	"github.com/skycoin/teller/src/service"
-	"github.com/skycoin/teller/src/service/btcaddrs"
-	"github.com/skycoin/teller/src/service/cli"
-	"github.com/skycoin/teller/src/service/config"
-	"github.com/skycoin/teller/src/service/exchange"
-	"github.com/skycoin/teller/src/service/monitor"
-	"github.com/skycoin/teller/src/service/scanner"
-	"github.com/skycoin/teller/src/service/sender"
+	"github.com/amltoken/teller/src/daemon"
+	"github.com/amltoken/teller/src/util/logger"
+	"github.com/amltoken/teller/src/service"
+	"github.com/amltoken/teller/src/service/btcaddrs"
+	"github.com/amltoken/teller/src/service/cli"
+	"github.com/amltoken/teller/src/service/config"
+	"github.com/amltoken/teller/src/service/exchange"
+	"github.com/amltoken/teller/src/service/monitor"
+	"github.com/amltoken/teller/src/service/scanner"
+	"github.com/amltoken/teller/src/service/sender"
 )
 
 const (

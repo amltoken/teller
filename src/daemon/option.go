@@ -1,6 +1,6 @@
 package daemon
 
-import "github.com/skycoin/teller/src/util/logger"
+import "github.com/amltoken/teller/src/util/logger"
 
 // Option session's optional argument type
 type Option func(*Session)

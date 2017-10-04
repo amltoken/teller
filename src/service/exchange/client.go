@@ -1,6 +1,6 @@
 package exchange
 
-import "github.com/skycoin/teller/src/daemon"
+import "github.com/amltoken/teller/src/daemon"
 
 // Client provides helper apis to interact with exchange service
 type Client struct {

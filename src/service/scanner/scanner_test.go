@@ -13,9 +13,9 @@ import (
 	"github.com/btcsuite/btcd/chaincfg/chainhash"
 	"github.com/stretchr/testify/require"
 
-	"github.com/skycoin/teller/src/util/dbutil"
-	"github.com/skycoin/teller/src/util/logger"
-	"github.com/skycoin/teller/src/service/testutil"
+	"github.com/amltoken/teller/src/util/dbutil"
+	"github.com/amltoken/teller/src/util/logger"
+	"github.com/amltoken/teller/src/service/testutil"
 )
 
 var dummyBlocksBktName = []byte("blocks")
