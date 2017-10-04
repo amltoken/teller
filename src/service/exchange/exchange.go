@@ -7,11 +7,11 @@ import (
 	"time"
 
 	"github.com/boltdb/bolt"
-	"github.com/skycoin/teller/src/daemon"
+	"github.com/amltoken/teller/src/daemon"
 	"github.com/amltoken/teller/src/util/dbutil"
 	"github.com/amltoken/teller/src/util/logger"
-	"github.com/skycoin/teller/src/service/scanner"
-	"github.com/skycoin/teller/src/service/sender"
+	"github.com/amltoken/teller/src/service/scanner"
+	"github.com/amltoken/teller/src/service/sender"
 )
 
 // SkySender provids apis for sending skycoin

@@ -3,7 +3,7 @@ package service
 import (
 	"testing"
 
-	"github.com/skycoin/teller/src/daemon"
+	"github.com/amltoken/teller/src/daemon"
 	"github.com/amltoken/teller/src/util/logger"
 	"github.com/stretchr/testify/require"
 )

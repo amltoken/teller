@@ -15,7 +15,7 @@ import (
 
 	"github.com/amltoken/teller/src/util/dbutil"
 	"github.com/amltoken/teller/src/util/logger"
-	"github.com/skycoin/teller/src/service/testutil"
+	"github.com/amltoken/teller/src/service/testutil"
 )
 
 var dummyBlocksBktName = []byte("blocks")

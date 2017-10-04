@@ -9,7 +9,7 @@ import (
 	"github.com/stretchr/testify/require"
 
 	"github.com/amltoken/teller/src/util/logger"
-	"github.com/skycoin/teller/src/service/testutil"
+	"github.com/amltoken/teller/src/service/testutil"
 )
 
 func TestNewBtcAddrs(t *testing.T) {

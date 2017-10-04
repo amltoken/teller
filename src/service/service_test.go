@@ -13,7 +13,7 @@ import (
 	"github.com/stretchr/testify/require"
 
 	"github.com/skycoin/skycoin/src/cipher"
-	"github.com/skycoin/teller/src/daemon"
+	"github.com/amltoken/teller/src/daemon"
 	"github.com/amltoken/teller/src/util/logger"
 )
 

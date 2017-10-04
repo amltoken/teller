@@ -1,7 +1,7 @@
 package proxy
 
 import (
-	"github.com/skycoin/teller/src/daemon"
+	"github.com/amltoken/teller/src/daemon"
 )
 
 func bindHandlers(px *Proxy) {

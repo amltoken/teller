@@ -10,9 +10,9 @@ import (
 
 	"github.com/amltoken/teller/src/util/dbutil"
 	"github.com/amltoken/teller/src/util/logger"
-	"github.com/skycoin/teller/src/service/scanner"
-	"github.com/skycoin/teller/src/service/sender"
-	"github.com/skycoin/teller/src/service/testutil"
+	"github.com/amltoken/teller/src/service/scanner"
+	"github.com/amltoken/teller/src/service/sender"
+	"github.com/amltoken/teller/src/service/testutil"
 )
 
 type dummySender struct {
