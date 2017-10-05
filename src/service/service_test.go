@@ -12,9 +12,9 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
+	"github.com/amltoken/teller/src/daemon"
+	"github.com/amltoken/teller/src/util/logger"
 	"github.com/skycoin/skycoin/src/cipher"
-	"github.com/skycoin/teller/src/daemon"
-	"github.com/skycoin/teller/src/util/logger"
 )
 
 func pingHandler(w daemon.ResponseWriteCloser, msg daemon.Messager) {

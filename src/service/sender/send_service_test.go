@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/skycoin/teller/src/util/logger"
-	"github.com/skycoin/teller/src/service/cli"
+	"github.com/amltoken/teller/src/service/cli"
+	"github.com/amltoken/teller/src/util/logger"
 	"github.com/stretchr/testify/require"
 )
 
