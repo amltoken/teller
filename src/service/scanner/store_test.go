@@ -9,8 +9,8 @@ import (
 	"github.com/boltdb/bolt"
 	"github.com/stretchr/testify/require"
 
-	"github.com/amltoken/teller/src/util/dbutil"
 	"github.com/amltoken/teller/src/service/testutil"
+	"github.com/amltoken/teller/src/util/dbutil"
 )
 
 func TestNewStore(t *testing.T) {

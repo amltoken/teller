@@ -8,8 +8,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/amltoken/teller/src/util/logger"
 	"github.com/amltoken/teller/src/service/testutil"
+	"github.com/amltoken/teller/src/util/logger"
 )
 
 func TestNewBtcAddrs(t *testing.T) {

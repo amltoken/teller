@@ -11,11 +11,11 @@ import (
 
 	"path/filepath"
 
+	"github.com/amltoken/teller/src/daemon"
+	"github.com/amltoken/teller/src/proxy"
+	"github.com/amltoken/teller/src/util/logger"
 	"github.com/google/gops/agent"
 	"github.com/skycoin/skycoin/src/cipher"
-	"github.com/amltoken/teller/src/daemon"
-	"github.com/amltoken/teller/src/util/logger"
-	"github.com/amltoken/teller/src/proxy"
 )
 
 func main() {

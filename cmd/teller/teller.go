@@ -25,7 +25,6 @@ import (
 	"github.com/skycoin/skycoin/src/cipher"
 
 	"github.com/amltoken/teller/src/daemon"
-	"github.com/amltoken/teller/src/util/logger"
 	"github.com/amltoken/teller/src/service"
 	"github.com/amltoken/teller/src/service/btcaddrs"
 	"github.com/amltoken/teller/src/service/cli"
@@ -34,6 +33,7 @@ import (
 	"github.com/amltoken/teller/src/service/monitor"
 	"github.com/amltoken/teller/src/service/scanner"
 	"github.com/amltoken/teller/src/service/sender"
+	"github.com/amltoken/teller/src/util/logger"
 )
 
 const (

@@ -10,9 +10,9 @@ import (
 	"fmt"
 
 	"github.com/amltoken/teller/src/daemon"
+	"github.com/amltoken/teller/src/service/exchange"
 	"github.com/amltoken/teller/src/util/httputil"
 	"github.com/amltoken/teller/src/util/logger"
-	"github.com/amltoken/teller/src/service/exchange"
 )
 
 const (

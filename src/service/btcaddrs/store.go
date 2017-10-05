@@ -1,8 +1,8 @@
 package btcaddrs
 
 import (
-	"github.com/boltdb/bolt"
 	"github.com/amltoken/teller/src/util/dbutil"
+	"github.com/boltdb/bolt"
 )
 
 var usedAddrBkt = []byte("used_btc_address")

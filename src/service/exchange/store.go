@@ -12,8 +12,8 @@ import (
 
 	"sort"
 
-	"github.com/boltdb/bolt"
 	"github.com/amltoken/teller/src/util/dbutil"
+	"github.com/boltdb/bolt"
 )
 
 var (
