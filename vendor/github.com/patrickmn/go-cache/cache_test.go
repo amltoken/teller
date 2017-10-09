@@ -1459,7 +1459,7 @@ func BenchmarkRWMutexMapGet(b *testing.B) {
 
 func BenchmarkRWMutexInterfaceMapGetStruct(b *testing.B) {
 	b.StopTimer()
-	s := struct{name string}{name: "foo"}
+	s := struct{ name string }{name: "foo"}
 	m := map[interface{}]string{
 		s: "bar",
 	}
