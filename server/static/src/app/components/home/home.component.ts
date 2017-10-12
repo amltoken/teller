@@ -31,10 +31,7 @@ export class HomeComponent {
     this.api.getCount().subscribe((data:any) => {
 
       let count = JSON.parse(data._body);
-      console.log(count);
       this.count = count;
-      console.log(this.count)
-
     })
   }
 
@@ -60,7 +57,6 @@ export class HomeComponent {
     console.log(this.newaddress)
     this.newbtc.push(this.newaddress);
     this.api.sendBTC(this.newbtc).subscribe((data:any)=> {
-      console.log(data);
       this.newbtc = [];
     })
   }
@@ -69,7 +65,6 @@ export class HomeComponent {
     console.log(address)
     this.used.push(address);
     this.api.setUsed(this.used).subscribe((data:any)=> {
-      console.log(data);
       this.used = [];
     })
   }

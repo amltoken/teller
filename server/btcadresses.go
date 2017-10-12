@@ -6,10 +6,11 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"os"
+
 	"github.com/amltoken/teller/src/util/httputil"
 	"github.com/boltdb/bolt"
 	"github.com/rs/cors"
-	"os"
 )
 
 var database *bolt.DB
@@ -23,7 +24,6 @@ type CountBtc struct {
 	Used int
 	Free int
 }
-
 
 //db functions
 func openDB() *bolt.DB {
@@ -45,14 +45,12 @@ func openDB() *bolt.DB {
 	return db
 }
 
-
-
 func valueExist(bucket string, value string) (bool, error) {
 	exist := false
 	database.View(func(tx *bolt.Tx) error {
 		b := tx.Bucket([]byte(bucket))
 		b.ForEach(func(k, v []byte) error {
-				s := string(v[:])
+			s := string(v[:])
 			if s == value {
 				exist = true
 			}
@@ -200,7 +198,6 @@ var GetBtcAddresses = func(w http.ResponseWriter, r *http.Request) {
 	database.View(func(tx *bolt.Tx) error {
 		b := tx.Bucket([]byte("addresses_btc"))
 		b.ForEach(func(k, v []byte) error {
-			fmt.Printf("value=%s\n", v)
 			s := string(v[:])
 			btc_adr.Addresses = append(btc_adr.Addresses, s)
 			return nil
@@ -215,7 +212,7 @@ var GetBtcAddresses = func(w http.ResponseWriter, r *http.Request) {
 // url: /getusedbtc
 var GetBtcUsedAddresses = func(w http.ResponseWriter, r *http.Request) {
 	log.Println("show used.")
-	btc_adr :=getUsed()
+	btc_adr := getUsed()
 	httputil.JSONResponse(w, btc_adr)
 }
 
@@ -242,9 +239,6 @@ var GetCountBTC = func(w http.ResponseWriter, r *http.Request) {
 
 	httputil.JSONResponse(w, count)
 }
-
-
-
 
 func LaunchServer(port string) {
 	database = openDB()
