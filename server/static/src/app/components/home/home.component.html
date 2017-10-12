@@ -1,0 +1,32 @@
+home.
+<br>
+<button (click)="getBTC()">get addresses</button>
+<button (click)="getFree()">get free addresses</button>
+<button (click)="getUsed()">get used addresses</button>
+<button (click)="getCount()">get count</button>
+<br>
+<br>
+<div class="count" *ngIf="count !== undefined">
+  All: {{count.All}}
+  <br>
+  Free: {{count.Free}}
+  <br>
+  Used: {{count.Used}}
+</div>
+<div class="addresses">
+{{title}}
+  <br>
+  <br>
+  <table>
+    <tr *ngFor="let address of addresses">
+      <th>{{address}}</th>
+      <th><button (click)="Bind(address)">bind</button></th>
+    </tr>
+  </table>
+
+</div>
+<br>
+<input type="text" size="30" [(ngModel)]="newaddress">
+<br>
+<button (click)="sendBTC()">send address</button>
+
