@@ -69,11 +69,14 @@ export class HomeComponent {
   }
 
   public sendBTC() {
-    console.log(this.newaddress);
-    this.newbtc.push(this.newaddress);
+    this.newbtc = [];
+    this.newbtc = this.newaddress.split("\n");
+    this.newbtc = this.newbtc.filter(item => item !== "");
     this.api.sendBTC(this.newbtc).subscribe((data:any)=> {
-      this.newbtc = [];
-      this.rows.push({'currency': "Bitcoin", 'address': this.newaddress, 'bind': this.newaddress})
+      for (let i = 0; i < this.newbtc.length; i++) {
+        this.rows.push({'currency': "Bitcoin", 'address': this.newbtc[i], 'bind': this.newaddress[i]});
+      }
+      this.newaddress = "";
     })
   }
 
