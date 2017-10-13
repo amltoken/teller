@@ -12,7 +12,16 @@ export class HomeComponent {
   private newaddress: string;
   private newbtc: string[] = [];
   private used: string[] = [];
+  private canBind: boolean = false;
   public count: {All: number, Free: number, Used: number};
+  rows: Array< { currency: string, address: string, bind: string}> = [];
+  columns = [
+    { prop: 'currency' },
+    { prop: 'address' },
+    { prop: 'bind' },
+  ];
+
+
   constructor(private api: ApiService) {
 
   }
@@ -21,9 +30,11 @@ export class HomeComponent {
   public getBTC() {
     this.api.getBTC().subscribe((data:any) => {
 
-      let btc = JSON.parse(data._body);
+    let btc = JSON.parse(data._body);
       this.addresses = btc.btc_addresses;
       this.title = "all addresses:";
+      this.changeRows(btc.btc_addresses)
+      this.canBind = false;
     })
   }
 
@@ -41,6 +52,8 @@ export class HomeComponent {
       let btc = JSON.parse(data._body);
       this.addresses = btc.btc_addresses;
       this.title = "free addresses:";
+      this.changeRows(btc.btc_addresses)
+      this.canBind = true;
     })
   }
 
@@ -50,23 +63,44 @@ export class HomeComponent {
       let btc = JSON.parse(data._body);
       this.addresses = btc.btc_addresses;
       this.title = "used addresses:";
+      this.changeRows(btc.btc_addresses)
+      this.canBind = false;
     })
   }
 
   public sendBTC() {
-    console.log(this.newaddress)
+    console.log(this.newaddress);
     this.newbtc.push(this.newaddress);
     this.api.sendBTC(this.newbtc).subscribe((data:any)=> {
       this.newbtc = [];
+      this.rows.push({'currency': "Bitcoin", 'address': this.newaddress, 'bind': this.newaddress})
     })
   }
 
   public Bind(address) {
     console.log(address)
     this.used.push(address);
+
     this.api.setUsed(this.used).subscribe((data:any)=> {
       this.used = [];
+      this.removeRow(address);
+      console.log(this.rows)
+
     })
+  }
+
+  //help function
+  public changeRows(addresses: any) {
+    this.rows = [];
+    for (let i=0; i<=addresses.length-1; i++) {
+      this.rows.push({'currency': "Bitcoin", 'address': addresses[i], 'bind': addresses[i]})
+    }
+    console.log(this.rows);
+  }
+
+  //remove from rows
+  public removeRow(address: string) {
+    this.rows = this.rows.filter(item => item.address !== address);
   }
 
 }
