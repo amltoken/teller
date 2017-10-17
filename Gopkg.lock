@@ -89,6 +89,12 @@
   version = "v1.0.0"
 
 [[projects]]
+  name = "github.com/rs/cors"
+  packages = ["."]
+  revision = "7af7a1e09ba336d2ea14b1ce73bf693c6837dbf6"
+  version = "v1.2"
+
+[[projects]]
   name = "github.com/skycoin/skycoin"
   packages = ["src/cipher","src/cipher/base58","src/cipher/chacha20","src/cipher/ripemd160","src/cipher/secp256k1-go","src/cipher/secp256k1-go/secp256k1-go2","src/util/logging"]
   revision = "dd924e1f2de8fab945e05b3245dbeabf267f2910"
@@ -133,6 +139,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "b43e12a0c08c616cb2a71e82c6be64aa638c975bb01910998c2504492b18f8cf"
+  inputs-digest = "2fce2dd5d0b84aebbe6d64c8eb5e49f2b76b63deba487d1060d1ae90bc520cf9"
   solver-name = "gps-cdcl"
   solver-version = 1
