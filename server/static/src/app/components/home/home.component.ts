@@ -59,7 +59,6 @@ export class HomeComponent {
 
   public getUsed() {
     this.api.getUsedBTC().subscribe((data:any) => {
-
       let btc = JSON.parse(data._body);
       this.addresses = btc.btc_addresses;
       this.title = "used addresses:";
@@ -98,7 +97,6 @@ export class HomeComponent {
     for (let i=0; i<=addresses.length-1; i++) {
       this.rows.push({'currency': "Bitcoin", 'address': addresses[i], 'bind': addresses[i]})
     }
-    console.log(this.rows);
   }
 
   //remove from rows

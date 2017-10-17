@@ -13,6 +13,11 @@ export class ApiService {
     return this.http.get(this.api + 'getbtc')
   }
 
+  public getAddressInfoBTC(address: string) {
+    return this.http.get(this.api + 'btcaddrinfo?address=' + address)
+  }
+
+
   public getUsedBTC() {
     return this.http.get(this.api + 'getusedbtc')
   }

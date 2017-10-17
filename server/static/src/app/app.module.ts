@@ -15,6 +15,7 @@ import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
+import { AddressComponent } from './components/address/address.component';
 
 import { ApiService } from './services/api.service';
 import { AppRoutes } from './app.routing';
@@ -22,7 +23,8 @@ import { AppRoutes } from './app.routing';
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    AddressComponent
   ],
   imports: [
     HttpModule,
